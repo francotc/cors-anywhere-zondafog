@@ -18,8 +18,6 @@ function assertLimited(rateLimitReturnValue, limit, period) {
   } else {
     msg = 'The number of requests is limited to ' + limit + ' per ' + period + ' minutes. ';
   }
-  msg += 'Please self-host CORS Anywhere if you need more quota. ' +
-    'See https://github.com/Rob--W/cors-anywhere#demo-server';
   assert.equal(rateLimitReturnValue, msg);
 }
 
